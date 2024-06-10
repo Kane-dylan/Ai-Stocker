@@ -2,59 +2,96 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/public/logo2.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Ai-stocker</title>
   </head>
   <body class="bg-gray-300 dark:bg-gray-700">
-    <div id="nav" class="flex flex-auto p-5 rounded-lg bg-neutral-500 items-center justify-between">
-      <div class="bg-gray-700 text-white p-2 rounded-lg items-start justify-start">Ai-stocker</div>
-      <div class="hs-dropdown relative inline-flex items-end justify-end">
-        <button id="hs-dropdown-default" type="button" class="hs-dropdown-toggle py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800">
-          Actions
-          <svg class="hs-dropdown-open:rotate-180 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-        </button>
-      
-        <div class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-60 bg-white shadow-md rounded-lg p-2 mt-2 dark:bg-neutral-800 dark:border dark:border-neutral-700 dark:divide-neutral-700 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full" aria-labelledby="hs-dropdown-default">
-          <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700" href="#">
-            Newsletter
-          </a>
-          <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700" href="#">
-            Purchases
-          </a>
-          <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700" href="#">
-            Downloads
-          </a>
-          <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700" href="#">
-            Team Account
-          </a>
+    <nav class="sticky top-0">
+      <div id="nav" class="flex flex-auto p-5 rounded-lg bg-neutral-500 items-center justify-between">
+        <div class="bg-gray-700 text-white p-2 rounded-lg items-start justify-start">Ai-stocker</div>
+          <div id="account">
+            <button class="sm:hidden px-5 py-1 bg-white hover:bg-neutral-300 rounded-lg border-2 border-black hover:border-white" onclick="handleMenu()">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path fill="black" d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12c5.16-1.26 9-6.45 9-12V5Zm0 3.9a3 3 0 1 1-3 3a3 3 0 0 1 3-3m0 7.9c2 0 6 1.09 6 3.08a7.2 7.2 0 0 1-12 0c0-1.99 4-3.08 6-3.08" />
+              </svg>
+            </button>       
+            <div id="account-option" class="hidden sm:flex gap-2">
+              <button class="flex gap-3 px-5 py-1 bg-white hover:bg-neutral-300 rounded-lg border-2 border-black hover:border-white hover:text-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 2048 2048">
+                  <path fill="currentColor" d="M1728 1152q26 0 45 19t19 45t-19 45t-45 19t-45-19t-19-45t19-45t45-19m-603-19q-79-54-170-81t-187-28q-88 0-170 23t-153 64t-129 100t-100 130t-65 153t-23 170H0q0-117 35-229t101-207t157-169t203-113q-56-36-100-83t-76-103t-47-118t-17-130q0-106 40-199t109-163T568 40T768 0t199 40t163 109t110 163t40 200q0 67-16 129t-48 119t-75 103t-101 83q81 29 156 80zM384 512q0 80 30 149t82 122t122 83t150 30q79 0 149-30t122-82t83-122t30-150q0-79-30-149t-82-122t-123-83t-149-30q-80 0-149 30t-122 82t-83 123t-30 149m1280 384q79 0 149 30t122 82t83 123t30 149q0 80-30 149t-82 122t-123 83t-149 30q-65 0-128-23v151h-128v128h-128v128H896v-282l395-396q-11-46-11-90q0-79 30-149t82-122t122-83t150-30m0 640q53 0 99-20t82-55t55-81t20-100q0-53-20-99t-55-82t-81-55t-100-20q-53 0-99 20t-82 55t-55 81t-20 100q0 35 9 64t21 61l-414 413v102h128v-128h128v-128h128v-91l93-92q40 23 77 39t86 16" />
+                </svg>
+                Login
+              </button>
+              <button id="" class="flex gap-3 px-5 py-1 bg-white hover:bg-neutral-300 rounded-lg border-2 border-black hover:border-white hover:text-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5">
+                    <path stroke-linejoin="round" d="M2.001 11.999h14m0 0l-3.5-3m3.5 3l-3.5 3" />
+                    <path d="M9.002 7c.012-2.175.109-3.353.877-4.121C10.758 2 12.172 2 15 2h1c2.829 0 4.243 0 5.122.879C22 3.757 22 5.172 22 8v8c0 2.828 0 4.243-.878 5.121c-.769.769-1.947.865-4.122.877M9.002 17c.012 2.175.109 3.353.877 4.121c.641.642 1.568.815 3.121.862" />
+                  </g>
+                </svg>
+                Signup
+              </button>
+            </div>
+          </div>
+      </div>
+      <div id="hiddenNav" class="hidden md:hidden fixed inset-0" >
+        <div class="flex-auto p-5 rounded-lg bg-neutral-500 items-center justify-between">
+          <div class="flex bg-gray-700 text-white p-2 rounded-lg items-start justify-between">Ai-stocker
+            <div class="text-end">
+              <button class="sm:hidden px-5 py-1 bg-white hover:bg-neutral-300 rounded-lg border-2 border-black hover:border-white" onclick="handleMenu()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path fill="black" d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12c5.16-1.26 9-6.45 9-12V5Zm0 3.9a3 3 0 1 1-3 3a3 3 0 0 1 3-3m0 7.9c2 0 6 1.09 6 3.08a7.2 7.2 0 0 1-12 0c0-1.99 4-3.08 6-3.08" />
+                </svg>
+              </button>
+            </div>
+          </div>
+              <div id="account-option" class="p-3">
+                <button class="flex gap-3 px-5 py-1 bg-white hover:bg-neutral-300 rounded-lg border-2 border-black hover:border-white hover:text-lg">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 2048 2048">
+                    <path fill="currentColor" d="M1728 1152q26 0 45 19t19 45t-19 45t-45 19t-45-19t-19-45t19-45t45-19m-603-19q-79-54-170-81t-187-28q-88 0-170 23t-153 64t-129 100t-100 130t-65 153t-23 170H0q0-117 35-229t101-207t157-169t203-113q-56-36-100-83t-76-103t-47-118t-17-130q0-106 40-199t109-163T568 40T768 0t199 40t163 109t110 163t40 200q0 67-16 129t-48 119t-75 103t-101 83q81 29 156 80zM384 512q0 80 30 149t82 122t122 83t150 30q79 0 149-30t122-82t83-122t30-150q0-79-30-149t-82-122t-123-83t-149-30q-80 0-149 30t-122 82t-83 123t-30 149m1280 384q79 0 149 30t122 82t83 123t30 149q0 80-30 149t-82 122t-123 83t-149 30q-65 0-128-23v151h-128v128h-128v128H896v-282l395-396q-11-46-11-90q0-79 30-149t82-122t122-83t150-30m0 640q53 0 99-20t82-55t55-81t20-100q0-53-20-99t-55-82t-81-55t-100-20q-53 0-99 20t-82 55t-55 81t-20 100q0 35 9 64t21 61l-414 413v102h128v-128h128v-128h128v-91l93-92q40 23 77 39t86 16" />
+                  </svg>
+                  Login
+                </button>
+                <button id="" class="flex gap-3 px-5 py-1 bg-white hover:bg-neutral-300 rounded-lg border-2 border-black hover:border-white hover:text-lg">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5">
+                      <path stroke-linejoin="round" d="M2.001 11.999h14m0 0l-3.5-3m3.5 3l-3.5 3" />
+                      <path d="M9.002 7c.012-2.175.109-3.353.877-4.121C10.758 2 12.172 2 15 2h1c2.829 0 4.243 0 5.122.879C22 3.757 22 5.172 22 8v8c0 2.828 0 4.243-.878 5.121c-.769.769-1.947.865-4.122.877M9.002 17c.012 2.175.109 3.353.877 4.121c.641.642 1.568.815 3.121.862" />
+                    </g>
+                  </svg>
+                  Signup
+                </button>
+              </div>
         </div>
       </div>
-    </div>
-    <div id="container" class="items-center justify-between m-10 p-10 bg-black rounded-lg">
-      <div id="content">
-        <textarea name="" class="container items-center justify-center rounded-2xl" placeholder="write your content"></textarea>
-      </div>      
-    </div>
-    <div id="options" class="items-center justify-between m-10 p-10 bg-black rounded-lg">
-      <div class="bg-white container items-center justify-center rounded-xl">
-        <button class="bg-blue-500 rounded-xl m-2 px-5 py-2 border border-gray-500 hover:text-blue-600 hover:bg-transparent" >Option</button>
-        <div id="images" class="block bg-yellow-400 rounded-lg m-1">
-          <button class="bg-gray-300 rounded-lg mx-20 my-3 px-10 py-0.5 hover:text-white hover:bg-black">Images</button>
-          <div class="m-2">
-            <textarea name="" id="" class="container bg-slate-200 items-center justify-center rounded-2xl" placeholder="Required image decsription"></textarea>
+    </nav>
+    <div id="header">
+      <div id="container" class="items-center justify-between m-10 p-10 bg-black rounded-lg">
+        <div id="content">
+          <textarea name="" class="container items-center justify-center rounded-2xl" placeholder="write your content"></textarea>
+        </div>      
+      </div>
+      <div id="options" class="items-center justify-between m-10 p-10 bg-black rounded-lg">
+        <div class="bg-white container items-center justify-center rounded-xl">
+          <button class="bg-blue-500 rounded-xl m-2 px-5 py-2 border border-gray-500 hover:text-blue-600 hover:bg-transparent" >Option</button>
+          <div id="images" class="block bg-yellow-400 rounded-lg m-1">
+            <button class="bg-gray-300 rounded-lg mx-20 my-3 px-10 py-0.5 hover:text-white hover:bg-black">Images</button>
+            <div class="m-2">
+              <textarea name="" id="" class="container bg-slate-200 items-center justify-center rounded-2xl" placeholder="Required image decsription"></textarea>
+            </div>
           </div>
-        </div>
-        <div id="videos" class="block bg-yellow-600 rounded-lg m-1">
-          <button class="bg-gray-300 rounded-lg mx-20 my-3 px-10 py-0.5 hover:text-white hover:bg-black">Videos</button>
-          <div class="m-2">
-            <textarea name="" id="" class="container bg-slate-200 items-center justify-center rounded-2xl" placeholder="Required image decsription"></textarea>
+          <div id="videos" class="block bg-yellow-600 rounded-lg m-1">
+            <button class="bg-gray-300 rounded-lg mx-20 my-3 px-10 py-0.5 hover:text-white hover:bg-black">Videos</button>
+            <div class="m-2">
+              <textarea name="" id="" class="container bg-slate-200 items-center justify-center rounded-2xl" placeholder="Required image decsription"></textarea>
+            </div>
           </div>
-        </div>
-        <div id="graphics" class="block bg-yellow-800 rounded-lg m-1">
-          <button class="bg-gray-300 rounded-lg mx-20 my-3 px-10 py-0.5 hover:text-white hover:bg-black">Graphics</button>
-          <div class="m-2">
-            <textarea name="" id="" class="container bg-slate-200 items-center justify-center rounded-2xl" placeholder="Required image decsription"></textarea>
+          <div id="graphics" class="block bg-yellow-800 rounded-lg m-1">
+            <button class="bg-gray-300 rounded-lg mx-20 my-3 px-10 py-0.5 hover:text-white hover:bg-black">Graphics</button>
+            <div class="m-2">
+              <textarea name="" id="" class="container bg-slate-200 items-center justify-center rounded-2xl" placeholder="Required image decsription"></textarea>
+            </div>
           </div>
         </div>
       </div>
@@ -66,4 +103,5 @@
     </body>
   <script type="module" src="/main.js"></script>
   <script src="./node_modules/preline/dist/preline.js"></script>
+  <script src="script.js"></script>
 </html>
