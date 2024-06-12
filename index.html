@@ -8,20 +8,13 @@
   </head>
   <body class="bg-black">
     <nav class="sticky top-0" style="padding: 1% 2.5% 2.5%">
-      <div
-        id="nav"
-        class="flex flex-auto p-5 rounded-lg bg-neutral-500/25 items-center justify-between backdrop-blur-lg"
-      >
-        <div
-          class="bg-black text-white p-2 rounded-3xl items-start justify-start font-semibold text-lg"
-        >
+      <div id="visibleNav" class="flex flex-auto p-5 rounded-lg bg-neutral-500/25 items-center justify-between backdrop-blur-lg">
+        <div class="bg-black text-white p-2 rounded-3xl items-start justify-start font-semibold text-lg">
           Ai-stocker
         </div>
         <div id="account">
-          <button
-            class="sm:hidden px-5 py-1 bg-black hover:bg-transparent rounded-3xl border-2 border-black hover:border-white"
-            onclick="handleMenu()"
-          >
+          <button class="sm:hidden px-5 py-1 bg-black hover:bg-transparent rounded-3xl border-2 border-black hover:border-white"
+            onclick="handleMenu()">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -81,21 +74,13 @@
           </div>
         </div>
       </div>
-      <div id="hiddenNav" class="hidden md:hidden fixed inset-0"
-        style="padding: 1% 2.5% 2.5%"
-      >
-        <div
-          class="flex-auto p-5 rounded-lg bg-neutral-500/20 justify-between backdrop-blur-lg"
-        >
-          <div
-            class="flex bg-black/80 text-white p-2 rounded-t-2xl justify-between text-lg font-semibold"
-          >
+      <div id="hiddenNav" class="hidden md:hidden fixed inset-0"       style="padding: 1% 2.5% 2.5%">
+        <div class="flex-auto p-5 rounded-lg bg-neutral-500/20 justify-between backdrop-blur-lg">
+          <div class="flex bg-black/80 text-white p-2 rounded-t-2xl justify-between text-lg font-semibold">
             Ai-stocker
             <div class="text-end">
-              <button
-                class="sm:hidden px-4 py-0.5 bg-neutral-500/20 rounded-3xl border-2 border-black hover:border-white/50"
-                onclick="handleMenu()"
-              >
+              <button class="sm:hidden px-4 py-0.5 bg-neutral-500/20 rounded-3xl border-2 border-black hover:border-white/50"
+                onclick="handleMenu()">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="22"
@@ -110,14 +95,9 @@
               </button>
             </div>
           </div>
-          <div
-            id="account-option"
-            class="p-3 flex justify-end bg-black/80 rounded-b-2xl" 
-          >
-            <button
-              class="m-3 flex gap-3 px-5 py-1 text-white bg-black hover:bg-transparent rounded-3xl border-2 border-black hover:border-white hover:text-lg"
-            >
-              <svg 
+          <div id="account-option" class="p-3 flex justify-end bg-black/80 rounded-b-2xl">
+            <button class="m-3 flex gap-3 px-5 py-1 text-white bg-black hover:bg-transparent rounded-3xl border-2 border-black hover:border-white hover:text-lg">
+              <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
@@ -130,10 +110,7 @@
               </svg>
               Login
             </button>
-            <button
-              id=""
-              class="m-3 flex gap-3 px-5 py-1 text-white bg-black hover:bg-transparent rounded-3xl border-2 border-black hover:border-white hover:text-lg"
-            >
+            <button class="m-3 flex gap-3 px-5 py-1 text-white bg-black hover:bg-transparent rounded-3xl border-2 border-black hover:border-white hover:text-lg">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -173,18 +150,18 @@
           <span class="font-semibold">Ai-stocker</span>
         </p>
       </div>
-      <div id="content"
-        class="flex items-center justify-between p-8 bg-neutral-600/30 rounded-xl"
+      <div id="content" class="flex items-center justify-between p-8 bg-neutral-600/30 rounded-xl"
         style="margin: 10% 10% 2%"
       >
         <div id="searchBar" class="flex-[1_0_0%]">
           <input
-            class="bg-gray-600/30 text-black dark:text-white py-2.5 px-3 block w-full rounded-l-3xl border-2 border-neutral-800 hover:border-white/30"            
+            class="bg-gray-600/30 text-black dark:text-white py-2.5 px-3 block w-full rounded-l-3xl border-2 border-neutral-800 hover:border-white/30 cursor-pointer"
             placeholder="Write your promt here"
           />
         </div>
         <button
-          class="bg-gray-600/30 text-black dark:text-white py-2.5 px-3 rounded-r-3xl border-2 border-neutral-800 hover:border-white/30">
+          class="bg-gray-600/30 text-black dark:text-white py-2.5 px-3 rounded-r-3xl border-2 border-neutral-800 hover:border-white/30"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -201,91 +178,93 @@
           </svg>
         </button>
       </div>
-      <div id="options"
-        class="items-center justify-between bg-neutral-600/30 rounded-lg"
-        style="margin: 5% 10% 5%; padding: 5%"
-      >
-        <div
-          class="bg-neutral-700/30 container items-center justify-center rounded-xl"
-        >
-          <button
-            class="bg-blue-500 rounded-tl-xl px-5 py-2 border-2 border-blue-500 hover:border-gray-500 hover:text-blue-600 hover:bg-transparent"
-          >
-            Option
-          </button>
-          <div id="aditionalOptions" class="p-2">
-            <div
-              id="images"
-              class="block bg-yellow-200 rounded-lg m-1"
-              style="margin: 5%"
-            >
-              <div style="text-align: end">
-                <button
-                  class="bg-gray-300 rounded-bl-lg rounded-tr-lg px-10 py-0.5 hover:text-white hover:bg-black/50"
-                  style="margin-bottom: 3%"
+      <div id="options">
+        <div class="justify-between bg-neutral-600/30 rounded-xl"
+          style="margin: 5% 10% 5%; padding: 3%">
+          <div id="visibleOptions" class="bg-neutral-700/30 container justify-between rounded-xl">
+              <button class="flex gap-2 bg-blue-500 rounded-xl pl-5 pr-2 py-1 border-2 border-blue-500 hover:border-gray-500 hover:text-neutral-300 hover:text-lg hover:bg-transparent"
+                onclick="actionMenu()">Option |
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="24"
+                  viewBox="0 0 1024 1024"
                 >
-                  Images
-                </button>
+                  <path
+                    fill="currentColor"
+                    d="M104.704 338.752a64 64 0 0 1 90.496 0l316.8 316.8l316.8-316.8a64 64 0 0 1 90.496 90.496L557.248 791.296a64 64 0 0 1-90.496 0L104.704 429.248a64 64 0 0 1 0-90.496"
+                  />
+                </svg>
+              </button>              
               </div>
-              <div class="m-2">
-                <textarea
-                  name=""
-                  id=""
-                  class="container px-2 pt-3 items-center justify-center rounded-xl bg-neutral-500/80 hover:bg-white/50 text-black"
-                  placeholder="Required images decsription"
-                ></textarea>
-              </div>
-            </div>
-            <div
-              id="videos"
-              class="block bg-yellow-400 rounded-lg m-1"
-              style="margin: 5%"
-            >
-              <div style="text-align: start">
-                <button
-                  class="bg-gray-300 rounded-br-lg rounded-tl-lg px-10 py-0.5 hover:text-white hover:bg-black/50"
-                  style="margin-bottom: 3%"
-                >
-                  Videos
-                </button>
-              </div>
-              <div class="m-2">
-                <textarea
-                  name=""
-                  id=""
-                  class="container px-2 pt-3 items-center justify-center rounded-xl bg-neutral-500/80 hover:bg-white/50 text-black"
-                  placeholder="Required videos decsription"
-                ></textarea>
-              </div>
-            </div>
-            <div
-              id="graphics"
-              class="block bg-yellow-600 rounded-lg m-1"
-              style="margin: 5%"
-            >
-              <div style="text-align: end">
-                <button
-                  class="bg-gray-300 rounded-bl-lg rounded-tr-lg px-10 py-0.5 hover:text-white hover:bg-black/50"
-                  style="margin-bottom: 3%"
-                >
-                  Graphics
-                </button>
-              </div>
-              <div class="m-2">
-                <textarea
-                  name=""
-                  id=""
-                  class="container px-2 pt-3 items-center justify-center rounded-xl bg-neutral-500/80 hover:bg-white/50 text-black"
-                  placeholder="Required graphical items decsription"
-                ></textarea>
-              </div>
-            </div>
-          </div>
+                <div id="hiddenOptions" class=" mt-2 p-0.5 bg-gray-700/30 items-center justify-between rounded-xl hover:border-transparent hover:shadow-lg hover:shadow-white/30 transition-all duration-300">
+                  <div id="images" class=" hover:bg-neutral-700/30 rounded-lg transition-all duration-300 m-1 hover:m-4 shadow-lg hover:shadow-black/50">
+                    <div class="flex justify-between">
+                      <div>
+                        <button class="bg-gray-900 rounded-lg px-10 py-0.5 hover:text-white hover:bg-black/50">
+                          Images
+                          </button>
+                      </div>
+                      <div>
+                        <button class="bg-gray-900 rounded-lg px-1 py-0.5 hover:text-white hover:bg-black/50">
+                          <input onclick="toggleDropdown0()" type="checkbox" class="m-1">
+                        </button>
+                      </div>                      
+                    </div>
+                    <div id="dropdownImages" class="hidden m-2">
+                      <textarea
+                        class="container px-2 pt-3 items-center justify-center rounded-xl bg-neutral-500/50 hover:bg-white/20"
+                        placeholder="Required images decsription"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div id="videos" class=" hover:bg-neutral-700/30 rounded-lg transition-all duration-300 m-1 hover:m-4 shadow-lg hover:shadow-black/50">
+                    <div class="flex justify-between">
+                      <div>
+                        <button class="bg-gray-900 rounded-lg px-10 py-0.5 hover:text-white hover:bg-black/50">
+                          Videos
+                          </button>
+                      </div>
+                      <div>
+                        <button class="bg-gray-900 rounded-lg px-1 py-0.5 hover:text-white hover:bg-black/50">
+                          <input onclick="toggleDropdown1()" type="checkbox" class="m-1">
+                        </button>
+                      </div>                      
+                    </div>
+                    <div id="dropdownVideos" class="hidden m-2">
+                      <textarea
+                        class="container px-2 pt-3 items-center justify-center rounded-xl bg-neutral-500/50 hover:bg-white/20"
+                        placeholder="Required videos decsription"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div id="graphics" class=" hover:bg-neutral-700/30 rounded-lg transition-all duration-300 m-1 hover:m-4 shadow-lg hover:shadow-black/50">
+                    <div class="flex justify-between">
+                      <div>
+                        <button class="bg-gray-900 rounded-lg px-10 py-0.5 hover:text-white hover:bg-black/50">
+                          Graphics
+                          </button>
+                      </div>
+                      <div>
+                        <button class="bg-gray-900 rounded-lg px-1 py-0.5 hover:text-white hover:bg-black/50">
+                          <input onclick="toggleDropdown2()" type="checkbox" class="m-1">
+                        </button>
+                      </div>                      
+                    </div>
+                    <div id="dropdownGraphics" class="hidden m-2">
+                      <textarea
+                        class="container px-2 pt-3 items-center justify-center rounded-xl bg-neutral-500/50 hover:bg-white/20"
+                        placeholder="Required graphics decsription"
+                      ></textarea>
+                    </div>
+                  </div>                 
+                </div>
         </div>
       </div>
     </div>
-    <div id="find" style="text-align: end; margin: 0% 10% 10%;">
-      <button class="bg-blue-500 rounded-xl m-5 px-10 py-2 text-xl hover:text-2xl font-semibold border-4  border-blue-500 hover:border-gray-500 hover:text-blue-600 hover:bg-transparent"
+    <div id="find" style="text-align: end; margin: 0% 10% 10%">
+      <button
+        class="text-white bg-blue-500 rounded-xl m-5 px-10 py-2 text-xl hover:text-2xl font-semibold border-4 border-blue-500 hover:border-gray-500 hover:text-gray-500 hover:bg-transparent"
       >
         Find
       </button>
