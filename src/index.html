@@ -151,33 +151,26 @@
           <span class="font-semibold">Ai-stocker</span>
         </p>
       </div>
-      <div id="content" class="flex items-center justify-between p-8 bg-neutral-600/30 rounded-xl"
-        style="margin: 10% 10% 2%"
-      >
-        <div id="searchBar" class="flex-[1_0_0%]">
-          <input
-            class="bg-gray-600/30 text-white py-2.5 px-3 block w-full rounded-l-3xl border-2 border-neutral-800 hover:border-white/30 cursor-pointer"
-            placeholder="Write your promt here"
-          />
-        </div>
-        <button
-          class="bg-gray-600/30 text-white py-2.5 px-3 rounded-r-3xl border-2 border-neutral-800 hover:border-white/30"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 21 21"
-          >
-            <path
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M17 4a2.121 2.121 0 0 1 0 3l-9.5 9.5l-4 1l1-3.944l9.504-9.552a2.116 2.116 0 0 1 2.864-.125zM9.5 17.5h8m-2-11l1 1"
-            />
-          </svg>
-        </button>
+      <div id="content" class="flex items-center justify-between p-8 bg-neutral-600/30 transition-all rounded-xl gap-1" style="margin: 10% 10% 2%">
+      <textarea id="promtBar" class="bg-gray-600/20 hover:bg-text-white px-5 pt-5 w-full rounded-lg hover:rounded-3xl transition-all duration-300 border-2 border-neutral-700 hover:border-white/10 cursor-pointer shadow-inner shadow-white/10 hover:shadow-black" placeholder="Write your promt here"></textarea>
+      <button
+    class="bg-gray-600/30 text-white py-2.5 px-3 rounded-full border-2 border-neutral-800 hover:border-white/10 shadow-inner shadow-white/10"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="24"
+      viewBox="0 0 21 21"
+    >
+      <path
+        fill="none"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M17 4a2.121 2.121 0 0 1 0 3l-9.5 9.5l-4 1l1-3.944l9.504-9.552a2.116 2.116 0 0 1 2.864-.125zM9.5 17.5h8m-2-11l1 1"
+      />
+    </svg>
+      </button>
       </div>
       <div id="options">
         <div class="justify-between bg-neutral-600/30 rounded-xl"
